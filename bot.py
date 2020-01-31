@@ -28,4 +28,4 @@ async def on_ready():
         print(f"Banned {member.display_name}!")
     print("Banning is complete!")
 
-client.run("NjcyODgzMzcxNzIyMDE0Nzgz.XjSa7w.IJ1EmGPqPOHF6s0-J-A9ohMR1k4", bot=True)
+client.run("NjcyODgzMzcxNzIyMDE0Nzgz.XjSdYw.OwSV9_P3_dAZjB_EVsVVCI42hT0", bot=True)
