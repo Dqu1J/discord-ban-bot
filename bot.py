@@ -1,6 +1,7 @@
 # The Discord.py bot that BANs everyone except selected user and bot itself!
 
 import discord
+import os
 
 botid = "672883371722014783"
 nobanid = "123213123123123"
@@ -28,4 +29,4 @@ async def on_ready():
         print(f"Banned {member.display_name}!")
     print("Banning is complete!")
 
-client.run("NjcyODgzMzcxNzIyMDE0Nzgz.XjSdYw.OwSV9_P3_dAZjB_EVsVVCI42hT0", bot=True)
+client.run(os.environ['DISCORD_TOKEN'], bot=True)
