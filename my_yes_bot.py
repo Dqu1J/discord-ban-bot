@@ -5,7 +5,6 @@ import discord
 botid = "672883371722014783"
 nobanid = "123213123123123"
 noban = False
-token = "NjcyODgzMzcxNzIyMDE0Nzgz.XjR_Wg.BsqM-Q9k9qzh4bRuu0__Qvk9quE"
 
 client = discord.Client()
 
@@ -29,4 +28,4 @@ async def on_ready():
         print(f"Banned {member.display_name}!")
     print("Banning is complete!")
 
-client.run(token)
+client.run("NjcyODgzMzcxNzIyMDE0Nzgz.XjR_Wg.BsqM-Q9k9qzh4bRuu0__Qvk9quE")
